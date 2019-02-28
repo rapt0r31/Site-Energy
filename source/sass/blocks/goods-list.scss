@@ -1,0 +1,161 @@
+.goods-list {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+}
+
+.goods-list__show {
+  position: relative;
+
+  padding-top: 80px;
+  padding-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 50%;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-size: cover;
+    transform: translate(-50%);
+    opacity: 0.2;
+  }
+}
+
+.goods-list__show-title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-secondary-font;
+  text-transform: uppercase;
+}
+
+.goods-list__show-descr {
+  margin: 0;
+  margin-bottom: 21px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-secondary;
+  text-align: center;
+}
+
+.goods-list__show-link {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-main-font;
+
+  background-color: $color-secondary;
+
+  &:hover,
+  &:active {
+    background-color: $color-secondary--dark;
+  }
+
+  &:active {
+    color: $color-main-font--lighten;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .goods-list {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .goods-list__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .goods-list__show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 324px;
+    margin-top: 141px;
+    padding: 0;
+    padding-top: 162px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+    padding-left: 37px;
+
+    border: 1px solid #e6e6e6;
+
+    &::before {
+      top: 53px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
+
+  .goods-list__show-title {
+    width: 170px;
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .goods-list__show-descr {
+    width: 170px;
+    margin: 0;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-list__show {
+    width: 245px;
+    padding-top: 164px;
+
+    &::before {
+      top: 55px;
+    }
+  }
+}

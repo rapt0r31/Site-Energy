@@ -1,0 +1,106 @@
+.goods-promo-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 187px;
+  padding-bottom: 42px;
+
+  color: $color-interactive-text;
+
+  background-color: $color-interactive;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-size: 280px auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 113px;
+
+    width: 55px;
+    height: 60px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-size: cover;
+  }
+}
+
+.goods-promo-item__descr {
+  width: 170px;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-secondary;
+  text-align: center;
+}
+
+@media (min-resolution: 1.5dppx) {
+  .goods-promo-item {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .goods-promo-item {
+    display: block;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 384px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px auto;
+
+    &::before {
+      top: 65px;
+      left: 91px;
+    }
+  }
+
+  .goods-promo-item__descr {
+    width: 324px;
+    padding-top: 72px;
+    padding-right: 95px;
+    padding-bottom: 68px;
+    padding-left: 39px;
+
+    text-align: left;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .goods-promo-item {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-promo-item {
+    width: 245px;
+    padding-top: 187px;
+    padding-right: 37px;
+    padding-bottom: 42px;
+    padding-left: 37px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: 245px auto;
+
+    &::before {
+      left: 96px;
+    }
+  }
+
+  .goods-promo-item__descr {
+    width: 170px;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .goods-promo-item {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}

@@ -1,0 +1,261 @@
+.categories-item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: $color-secondary;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-interactive;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--slim::after {
+    top: 22px;
+    left: 30px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.categories-item__title {
+  margin: 0;
+  margin-bottom: 24px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 71px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: $color-secondary-font;
+  text-transform: uppercase;
+}
+
+.categories-item__descr {
+  width: 230px;
+  margin: 0;
+  margin-bottom: 22px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-secondary;
+}
+
+.categories-item__link {
+  display: block;
+  padding-top: 19px;
+  padding-right: 60px;
+  padding-bottom: 22px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-secondary-font;
+  text-transform: uppercase;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.categories-item__link:hover .categories-item__link-descr::before,
+.categories-item__link:active .categories-item__link-descr::before {
+  right: -57px;
+
+  width: 33px;
+
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+}
+
+.categories-item__link-descr {
+  position: relative;
+
+  display: inline-flex;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -35px;
+
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .categories-item {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-top: 76px;
+    padding-bottom: 62px;
+    padding-left: 54px;
+
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 80px;
+      right: 92px;
+      left: auto;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      right: 28px;
+      left: auto;
+
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .categories-item__title {
+    width: 380px;
+    margin-bottom: 25px;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  .categories-item__descr {
+    margin-bottom: 56px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .categories-item--slim .categories-item__descr {
+    width: 372px;
+  }
+
+  .categories-item--pro .categories-item__descr {
+    width: 340px;
+  }
+
+  .categories-item__link {
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    border: none;
+  }
+
+  .categories-item__link-descr {
+    max-width: 380px;
+
+    &::before {
+      top: 5px;
+      right: -46px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-item {
+    width: 570px;
+    margin: 0;
+    padding-top: 76px;
+    padding-right: 50px;
+    padding-bottom: 62px;
+    padding-left: 52px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: 41px;
+      left: 66px;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .categories-item__title {
+    margin-bottom: 74px;
+    padding-left: 162px;
+  }
+
+  .categories-item__descr {
+    margin-bottom: 31px;
+  }
+
+  .categories-item--slim .categories-item__descr,
+  .categories-item--pro .categories-item__descr {
+    width: 100%;
+  }
+
+  .categories-item__link-descr {
+    &::before {
+      top: 4px;
+      right: -48px;
+    }
+  }
+}

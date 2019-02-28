@@ -1,0 +1,148 @@
+.goods-more-item {
+  padding-top: 13px;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.goods-more-item__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-third-font;
+  text-transform: uppercase;
+}
+
+.goods-more-item__table {
+  width: 100%;
+  margin-bottom: 14px;
+
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-secondary;
+}
+
+.goods-more-item__table-column-left {
+  width: 140px;
+
+  font-weight: 400;
+  text-align: left;
+}
+
+.goods-more-item__table-column-right {
+  width: 140px;
+
+  text-align: right;
+}
+
+.goods-more-item__link {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .goods-more-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-right: 37px;
+    padding-bottom: 27px;
+    padding-left: 37px;
+
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+
+  .goods-more-item__title {
+    width: 346px;
+    margin: 0;
+    margin-bottom: 21px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .goods-more-item__table {
+    width: 286px;
+    margin: 0;
+    margin-bottom: 21px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods-more-item__table-column-left {
+    width: 195px;
+    padding-top: 4px;
+
+    text-align: right;
+  }
+
+  .goods-more-item__table-column-right {
+    width: 93px;
+    padding-top: 4px;
+
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-more-item {
+    width: 895px;
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 16px;
+    padding-left: 0;
+
+    border: 1px solid #d9d9d9;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+
+    &:last-child {
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+
+  .goods-more-item__title {
+    width: 325px;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .goods-more-item__table {
+    width: 325px;
+    margin: 0;
+  }
+
+  .goods-more-item__table-column-left {
+    width: 245px;
+    padding-top: 14px;
+
+    text-align: left;
+  }
+
+  .goods-more-item__table-column-right {
+    width: 80px;
+    padding-top: 14px;
+
+    text-align: left;
+  }
+
+  .goods-more-item__link {
+    width: 245px;
+  }
+}

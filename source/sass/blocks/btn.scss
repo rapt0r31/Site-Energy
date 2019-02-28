@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  padding: 11px 11px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $color-interactive-text;
+  text-transform: uppercase;
+
+  background-color: $color-interactive;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-interactive--dark;
+  }
+
+  &:active {
+    color: $color-interactive-text--lighten;
+
+    background-color: $color-interactive--dark;
+  }
+}

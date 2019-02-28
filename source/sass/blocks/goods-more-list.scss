@@ -1,0 +1,13 @@
+.goods-more-list {
+  padding-bottom: 39px;
+
+  border-top: 1px solid #cdcdcd;
+}
+
+@media (min-width: $tablet-width) {
+  .goods-more-list {
+    padding-bottom: 69px;
+
+    border: none;
+  }
+}

@@ -1,0 +1,17 @@
+.categories {
+  margin-bottom: 17px;
+}
+
+@media (min-width: $tablet-width) {
+  .categories {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

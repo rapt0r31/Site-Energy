@@ -1,0 +1,51 @@
+$white-color: #ffffff;
+$white-color--light: rgba(255, 255, 255, 0.6);
+$white-color--lighten: rgba(255, 255, 255, 0.3);
+
+$concrete-color: #f2f2f2;
+$concrete-color--dark: #ebebeb;
+
+$tundora-color: #444444;
+$tundora-color--light: rgba(68, 68, 68, 0.6);
+$tundora-color--lighten: rgba(68, 68, 68, 0.3);
+
+$cod-gray-color: #111111;
+$cod-gray-color--light: rgba(17, 17, 17, 0.6);
+$cod-gray-color--lighten: rgba(17, 17, 17, 0.3);
+
+$mine-shaft-color: #222222;
+
+$apple-color: #68b738;
+$apple-color--dark: #5eaa2f;
+
+$vivid-tangerine: #ff8282;
+
+
+$color-main: $white-color;
+$color-secondary: $concrete-color;
+$color-secondary--dark: $concrete-color--dark;
+
+$color-main-font: $tundora-color;
+$color-main-font--light: $tundora-color--light;
+$color-main-font--lighten: $tundora-color--lighten;
+
+$color-secondary-font: $cod-gray-color;
+$color-secondary-font--light: $cod-gray-color--light;
+$color-secondary-font--lighten: $cod-gray-color--lighten;
+
+$color-third-font: $mine-shaft-color;
+
+$color-interactive: $apple-color;
+$color-interactive--dark: $apple-color--dark;
+$color-interactive-text: $white-color;
+$color-interactive-text--light: $white-color--light;
+$color-interactive-text--lighten: $white-color--lighten;
+$color-error: $vivid-tangerine;
+
+
+$font-main: "Oswald", arial, sans-serif;
+$font-secondary: arial, sans-serif;
+
+
+$tablet-width: 768px;
+$desktop-width: 1300px;

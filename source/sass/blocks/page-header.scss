@@ -1,0 +1,281 @@
+.page-header {
+  color: $color-secondary-font;
+
+  background-color: $color-main;
+}
+
+.page-header__wrap {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+}
+
+.page-header__container {
+  position: relative;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 10px;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__nav--close {
+  display: none;
+}
+
+.page-header__nav {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+.page-header__nav-list {
+  @include list-reset;
+}
+
+.page-header__nav-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+}
+
+.page-header__nav-link {
+  display: block;
+  padding: 23px 0;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-secondary-font;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+
+  .page-header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .page-header__wrap {
+    width: 192px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-header__logo {
+    width: 192px;
+    padding: 0;
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+  }
+
+  .page-header__logo-img {
+    width: 173px;
+    height: 58px;
+  }
+
+  .page-header__nav {
+    display: block;
+    width: 516px;
+    padding-top: 2px;
+  }
+
+  .page-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 516px;
+  }
+
+  .page-header__nav-item {
+    margin-left: 36px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-header__nav-link {
+    padding-top: 16px;
+    padding-bottom: 7px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-third-font;
+
+    &--active {
+      border-bottom: 2px solid #68b738;
+    }
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    position: relative;
+
+    padding: 0;
+    padding-top: 54px;
+
+    background: none;
+  }
+
+  .index .page-header {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+
+      width: 50%;
+      height: 696px;
+
+      background-color: #64a83b;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  .page-header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .page-header__wrap {
+    width: 610px;
+
+    border: none;
+  }
+
+  .page-header__logo {
+    width: 610px;
+    padding: 0;
+  }
+
+  .page-header__logo-img {
+    width: 202px;
+    height: 59px;
+  }
+
+  .page-header__nav {
+    width: 610px;
+    padding: 0;
+    padding-left: 40px;
+  }
+
+  .page-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 570px;
+  }
+
+  .page-header__nav-item {
+    margin: 0;
+    margin-left: 34px;
+
+    border: none;
+  }
+
+  .page-header__nav-link {
+    padding: 0;
+    padding-top: 19px;
+    padding-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: $color-secondary-font;
+  }
+
+  .index .page-header__nav-link {
+    color: $color-main;
+
+    border-color: $color-main;
+  }
+}

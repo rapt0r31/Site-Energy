@@ -1,0 +1,38 @@
+.social-item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &:hover use,
+  &:active use {
+    fill: $color-interactive;
+  }
+
+  &:active use {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-item__link {
+    width: auto;
+    height: 28px;
+  }
+
+  .social-item__link-icon--vk {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social-item__link-icon--inst {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social-item__link-icon--fb {
+    width: 14px;
+    height: 28px;
+  }
+}
